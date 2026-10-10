@@ -9,3 +9,8 @@ class Solution:
                 return [seen[k],i]
             else:
                 seen[num] = i
+
+        for s in seen:
+            left = target - s
+            if left in seen:
+                return [seen[s],seen[left]]
